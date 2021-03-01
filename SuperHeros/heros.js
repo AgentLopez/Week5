@@ -22,7 +22,6 @@ function searchDB(sItem) {
     let dotRequest = new XMLHttpRequest()
     dotRequest.addEventListener('load', function () {
         let dotj = JSON.parse(this.responseText)
-
         let dotsList = dotj.Search.map(function (info) {
             return `
         <div class="movieDot">
@@ -30,12 +29,9 @@ function searchDB(sItem) {
         <div class="title"><a href="#movieGush" onclick="gush('${info.imdbID}')">${info.Title}</a></div>
         </div>
         `
-
         })
 
         movieDotsContainer.innerHTML = dotsList.join("")
-
-
     })
 
     dotRequest.open('GET', simdbURL)
@@ -43,14 +39,11 @@ function searchDB(sItem) {
 }
 
 function gush(imdb) {
-    // event.preventDefault()
     imdbURL = `http://www.omdbapi.com/?i=${imdb}&apikey=c01e19ad`
-    console.log(imdb)
     let gushRequest = new XMLHttpRequest()
 
     gushRequest.addEventListener('load', function () {
         let gushj = JSON.parse(this.responseText)
-        console.log(gushj)
         let gushing = `
         <div class="mainAttraction">
         <img src="${gushj.Poster}" class="largePoster">
