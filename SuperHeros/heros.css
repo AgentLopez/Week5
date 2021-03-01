@@ -1,0 +1,31 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+.movieDot {
+    width: 100px;
+}
+
+.movieDotsContainer {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.smallPoster {
+    width: 75px;
+    height: auto;
+}
+
+.mainAttraction {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+}
+
+.mainInfoBox {
+    border: black solid 10px;
+}
