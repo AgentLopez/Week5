@@ -16,6 +16,11 @@
     margin: 10px;
 }
 
+.emailDisplay {
+    background: lightgrey;
+    padding-top: 5px;
+}
+
 .orderBar {
     width: 300px;
 }
@@ -29,6 +34,7 @@
 }
 
 .priceAndDeleteBox{
+    background: lightgrey;
     display: flex;
     flex-direction: row;
     place-content: space-around;

@@ -52,7 +52,7 @@ function printToClient(orders) {
     let CoffeeOrders = JSON.parse(orders)
     let listCoffeeItmes = CoffeeOrders.map(function (order) {
         return `
-        <li class="orderItem"><div class=emailDisplay">
+        <li class="orderItem"><div class="emailDisplay">
         ${order.email}</div><div class="orderAndSize">${order.type}  -  ${order.size}</div> 
         <div class="priceAndDeleteBox"><div class="priceAndDelete">$ ${order.price}</div><div class="priceAndDelete"><button id="completedButton" onClick="completed('${order.email}')">COMPLETED</button></div></div>
         </li>
