@@ -78,3 +78,5 @@ function completed(orderToRemove) {
     completedOrder.send()
 
 }
+
+displayOrders()
