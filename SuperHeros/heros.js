@@ -61,4 +61,4 @@ function gush(imdb) {
     gushRequest.send()
 }
 
-searchDB('my little pony')
+searchDB('lego')
