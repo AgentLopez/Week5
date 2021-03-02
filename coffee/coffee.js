@@ -7,6 +7,35 @@ const addCoffeeOrder = document.getElementById("addCoffeeOrder")
 const refreshOrders = document.getElementById("refreshOrders")
 const currentOrders = document.getElementById("currentOrders")
 
+const findOrderEmail = document.getElementById("findOrderEmail")
+const submitEmailSearch = document.getElementById("submitEmailSearch")
+
+submitEmailSearch.addEventListener('click', function() {
+    event.preventDefault()
+
+    const orderemail = findOrderEmail.value
+    let checkOrder = new XMLHttpRequest()
+
+    checkOrder.addEventListener('load', function() {
+        let oneCoffeeOrder = JSON.parse(this.responseText)
+        console.log(oneCoffeeOrder)
+        let oneOrder = `
+        <li class="orderItem"><div class="emailDisplay">
+        ${oneCoffeeOrder.email}</div><div class="orderAndSize">${oneCoffeeOrder.type}  -  ${oneCoffeeOrder.size}</div> 
+        <div class="priceAndDeleteBox"><div class="priceAndDelete">$ ${oneCoffeeOrder.price}</div><div class="priceAndDelete"><button id="completedButton" onClick="completed('${oneCoffeeOrder.email}')">COMPLETED</button></div></div>
+        </li>
+        
+        `
+        currentOrders.innerHTML = oneOrder
+    })
+
+    
+    
+
+
+    checkOrder.open('GET',`https://troubled-peaceful-hell.glitch.me/orders/${orderemail}`)
+    checkOrder.send()
+})
 
 addCoffeeOrder.addEventListener('click', function() {
 
