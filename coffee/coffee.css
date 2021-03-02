@@ -1,0 +1,35 @@
+.total {
+    text-align: -webkit-center;
+}
+
+.currentOrders{
+
+}
+
+.orderItem {
+    border:lightblue solid 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+.orderBar {
+    width: 300px;
+}
+
+.orderAndSize {
+    font-size: 2rem;
+}
+
+.priceAndDelete{
+    padding: 10px;
+}
+
+.priceAndDeleteBox{
+    display: flex;
+    flex-direction: row;
+    place-content: space-around;
+}
