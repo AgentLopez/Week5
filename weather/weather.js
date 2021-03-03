@@ -7,7 +7,7 @@ const weatherSpot = document.getElementById("weatherSpot")
 letsTalkWeather.addEventListener('click', function () {
     event.preventDefault()
     let zip = yourZipCode.value
-    let weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${zip}&units=imperial&appid=12c5273402c3d535389896c9e3e718c9`
+    let weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${zip}&units=imperial&appid=12c5273402c3d535389896c9e3e718c9`
 
     fetch(weatherURL)
     .then ((response) => {
@@ -34,7 +34,7 @@ function geoFindMe() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
 
-        fetch(`http://api.openweathermap.org/data/2.5/find?lat=${latitude}&lon=${longitude}&cnt=1&units=imperial&appid=12c5273402c3d535389896c9e3e718c9`)
+        fetch(`https://api.openweathermap.org/data/2.5/find?lat=${latitude}&lon=${longitude}&cnt=1&units=imperial&appid=12c5273402c3d535389896c9e3e718c9`)
         .then((response) => {
             return response.json()
         })
