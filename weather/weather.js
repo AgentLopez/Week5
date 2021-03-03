@@ -24,7 +24,7 @@ function showWeather(currentWeather) {
     <h1>At Home in ${currentWeather.name}</h1>
     <h2>The Temp is ${currentWeather.main.temp}</h2>
     <h3>It's ${currentWeather.weather[0].main}, with pressure of ${currentWeather.main.pressure}</h3>
-    <h4>Today's High is ${currentWeather.main.temp_max}, Low of ${currentWeather.main.temp_min}</h4>
+    <h4>Current High is ${currentWeather.main.temp_max}, Low of ${currentWeather.main.temp_min}</h4>
     `
 }
 
