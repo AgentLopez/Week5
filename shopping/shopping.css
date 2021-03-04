@@ -1,0 +1,47 @@
+body {
+    background-size: 100%;
+    text-align: center;
+    
+}
+
+li {
+
+}
+
+.total {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.noBullets{
+list-style-type: none;
+}
+
+.bottom{
+    display: flex;
+    flex-flow: row;
+}
+
+.itemsWorkSpace {
+    background-color: cornsilk;
+    width: 220px;
+    padding: 10px;
+}
+
+.storesList {
+    background-color: lavenderblush;
+    width: 220px;
+    text-align: -webkit-left;
+    padding: 10px;
+}
+
+.oneStore {
+    font-size: 2rem;
+}
+
+.topacross{
+    padding: 10px;
+}
