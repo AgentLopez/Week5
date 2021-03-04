@@ -1,5 +1,6 @@
 
 const newStoreToAdd = document.getElementById("newStoreToAdd")
+const newStoreAddress = document.getElementById("newStoreAddress")
 const addStoreButton = document.getElementById("addStoreButton")
 
 const listOfStores = document.getElementById("listOfStores")
@@ -46,10 +47,11 @@ addNewItem.addEventListener('click', function () {
 
 addStoreButton.addEventListener('click', function () {
     const newStore = newStoreToAdd.value
-
+    const storeAdd = newStoreAddress.value
     db.collection('stores')
         .add({
-            name: newStore
+            name: newStore,
+            address: storeAdd
         })
         .then(function () {
             getStores()
@@ -91,6 +93,7 @@ function displayStores(snapshot) {
         let data = doc.data()
         console.log(data)
         let store = `<li class="oneStore"><a href="#" onClick="showStoreItems('${doc.id}')">${data.name}</a></li>
+        <li>${data.address}</li>
         <button onClick="removeStore('${doc.id}')">remove</button>`
         listOfStores.insertAdjacentHTML('beforeend', store)
         let storeoption = `
